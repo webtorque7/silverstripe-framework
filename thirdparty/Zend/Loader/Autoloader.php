@@ -21,7 +21,7 @@
  */
 
 /** Zend_Loader */
-require_once 'Zend/Loader.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Loader.php';
 
 /**
  * Autoloader stack and namespace autoloader

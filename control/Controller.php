@@ -166,10 +166,9 @@ class Controller extends RequestHandler implements TemplateGlobalProvider {
 				}
 				$body = $body->getViewer($request->latestParam('Action'))->process($body);
 			}
-			
+
 			$this->response->setBody($body);
 		}
-
 
 		ContentNegotiator::process($this->response);
 		HTTP::add_cache_headers($this->response);

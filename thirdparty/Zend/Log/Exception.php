@@ -20,7 +20,7 @@
  */
 
 /** Zend_Exception */
-require_once 'Zend/Exception.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Exception.php';
 
 /**
  * @category   Zend

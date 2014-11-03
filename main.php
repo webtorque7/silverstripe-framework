@@ -96,8 +96,8 @@ if (substr(strtolower($url), 0, strlen(BASE_URL)) == strtolower(BASE_URL)) $url 
 /**
  * Include SilverStripe's core code
  */
-require_once('core/startup/ErrorControlChain.php');
-require_once('core/startup/ParameterConfirmationToken.php');
+require_once FRAMEWORK_PATH . DIRECTORY_SEPARATOR . 'core/startup/ErrorControlChain.php';
+require_once FRAMEWORK_PATH . DIRECTORY_SEPARATOR . 'core/startup/ParameterConfirmationToken.php';
 
 $chain = new ErrorControlChain();
 $token = new ParameterConfirmationToken('flush');
@@ -113,7 +113,7 @@ $chain
 		}
 
 		// Load in core
-		require_once('core/Core.php');
+		require_once FRAMEWORK_PATH . DIRECTORY_SEPARATOR . 'core/Core.php';
 
 		if (isset($_GET['debug_profile'])) {
 			Profiler::init();
@@ -122,7 +122,7 @@ $chain
 		}
 
 		// Connect to database
-		require_once('model/DB.php');
+		require_once FRAMEWORK_PATH . DIRECTORY_SEPARATOR . 'model/DB.php';
 		global $databaseConfig;
 
 		if (isset($_GET['debug_profile'])) Profiler::mark('DB::connect');

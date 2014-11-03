@@ -561,7 +561,7 @@ class i18nTextCollector_Writer_RailsYaml implements i18nTextCollector_Writer {
 
 	public function getYaml($entities, $locale) {
 		// Use the Zend copy of this script to prevent class conflicts when RailsYaml is included
-		require_once 'thirdparty/zend_translate_railsyaml/library/Translate/Adapter/thirdparty/sfYaml/lib'
+		require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . '/zend_translate_railsyaml/library/Translate/Adapter/thirdparty/sfYaml/lib'
 			. '/sfYamlDumper.php';
 
 		// Unflatten array

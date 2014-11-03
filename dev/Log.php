@@ -1,5 +1,5 @@
 <?php
-require_once 'Zend/Log.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Log.php';
 
 /**
  * Wrapper class for a logging handler like {@link Zend_Log}

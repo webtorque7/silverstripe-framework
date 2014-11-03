@@ -1,6 +1,6 @@
 <?php
-require_once 'Zend/Locale.php';
-require_once 'Zend/Translate/Adapter.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Locale.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Translate/Adapter.php';
 
 /**
  * @package framework
@@ -34,7 +34,7 @@ class i18nSSLegacyAdapter extends Zend_Translate_Adapter implements i18nTranslat
 		if(pathinfo($this->_filename, PATHINFO_EXTENSION) != 'php') return;
 		
 		if (!is_readable($this->_filename)) {
-			require_once 'Zend/Translate/Exception.php';
+			require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Translate/Exception.php';
 			throw new Zend_Translate_Exception('Error opening translation file \'' . $this->_filename . '\'.');
 		}
 

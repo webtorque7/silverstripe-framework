@@ -138,7 +138,7 @@ class RequestHandler extends ViewableData {
 	public function handleRequest(SS_HTTPRequest $request, DataModel $model) {
 		// $handlerClass is used to step up the class hierarchy to implement url_handlers inheritance
 		$handlerClass = ($this->class) ? $this->class : get_class($this);
-	
+
 		if($this->brokenOnConstruct) {
 			user_error("parent::__construct() needs to be called on {$handlerClass}::__construct()", E_USER_WARNING);
 		}
@@ -162,7 +162,7 @@ class RequestHandler extends ViewableData {
 						Debug::message("Rule '$rule' matched to action '$action' on $this->class."
 							. " Latest request params: " . var_export($request->latestParams(), true));
 					}
-				
+
 					// Actions can reference URL parameters, eg, '$Action/$ID/$OtherID' => '$Action',
 					if($action[0] == '$') $action = $params[substr($action,1)];
 				
@@ -175,7 +175,7 @@ class RequestHandler extends ViewableData {
 						} else if(!is_string($action)) {
 							user_error("Non-string method name: " . var_export($action, true), E_USER_ERROR);
 						}
-						
+
 						try {
 							if(!$this->hasMethod($action)) {
 								return $this->httpError(404, "Action '$action' isn't available on class "
@@ -207,9 +207,9 @@ class RequestHandler extends ViewableData {
 
 						// Array results can be used to handle 
 						if(is_array($returnValue)) $returnValue = $this->customise($returnValue);
-					
+
 						return $returnValue;
-						
+
 					// If we return some other data, and all the URL is parsed, then return that
 					} else if($request->allParsed()) {
 						return $result;
@@ -218,14 +218,14 @@ class RequestHandler extends ViewableData {
 					} else {
 						return $this->httpError(404, "I can't handle sub-URLs of a $this->class object.");
 					}
-				
+
 					return $this;
 				}
 			}
-			
+
 			$handlerClass = get_parent_class($handlerClass);
 		}
-		
+
 		// If nothing matches, return this object
 		return $this;
 	}

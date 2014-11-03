@@ -23,7 +23,7 @@
 /**
  * @see Zend_Loader_Exception
  */
-require_once 'Zend/Loader/Exception.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Loader/Exception.php';
 
 /**
  * Plugin class loader exceptions

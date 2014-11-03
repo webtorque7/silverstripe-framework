@@ -202,7 +202,7 @@ set_include_path($includePath);
 /**
  * Define the temporary folder if it wasn't defined yet
  */
-require_once 'core/TempPath.php';
+require_once FRAMEWORK_PATH . DIRECTORY_SEPARATOR . 'core/TempPath.php';
 
 if(!defined('TEMP_FOLDER')) {
 	define('TEMP_FOLDER', getTempFolder(BASE_PATH));

@@ -1,6 +1,6 @@
 <?php
-require_once 'Zend/Translate.php';
-require_once 'zend_translate_railsyaml/library/Translate/Adapter/RailsYAML.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Translate.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'zend_translate_railsyaml/library/Translate/Adapter/RailsYAML.php';
 
 /**
  * @package framework

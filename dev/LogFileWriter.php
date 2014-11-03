@@ -1,5 +1,5 @@
 <?php
-require_once 'Zend/Log/Writer/Abstract.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Log/Writer/Abstract.php';
 
 /**
  * Writes an error message to a file.

@@ -1,7 +1,7 @@
 <?php
-require_once 'Zend/Translate.php';
-require_once 'i18nRailsYamlAdapter.php';
-require_once 'i18nSSLegacyAdapter.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Translate.php';
+//require_once 'i18nRailsYamlAdapter.php';
+//require_once 'i18nSSLegacyAdapter.php';
 
 /**
  * Base-class for storage and retrieval of translated entities.
@@ -131,7 +131,7 @@ class i18n extends Object implements TemplateGlobalProvider {
 	 * @return string ISO date format
 	 */
 	public static function get_date_format() {
-		require_once 'Zend/Date.php';
+		require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Date.php';
 		return (self::$date_format) ? self::$date_format : Zend_Locale_Format::getDateFormat(self::get_locale());
 	}
 	
@@ -146,7 +146,7 @@ class i18n extends Object implements TemplateGlobalProvider {
 	 * @return string ISO time format
 	 */
 	public static function get_time_format() {
-		require_once 'Zend/Date.php';
+		require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Date.php';
 		return (self::$time_format) ? self::$time_format : Zend_Locale_Format::getTimeFormat(self::get_locale());
 	}
 	

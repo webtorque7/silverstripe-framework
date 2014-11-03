@@ -1,10 +1,10 @@
 <?php
 
 /** Zend_Locale */
-require_once 'Zend/Locale.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Locale.php';
 
 /** Zend_Translate_Adapter */
-require_once 'Zend/Translate/Adapter.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Translate/Adapter.php';
 
 // ischommer CUSTOM Check required because SS core also includes the lib, from a different location
 if(!class_exists('sfYaml')) require_once 'thirdparty/sfYaml/lib/sfYaml.php';

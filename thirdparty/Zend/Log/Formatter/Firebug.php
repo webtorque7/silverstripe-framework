@@ -21,7 +21,7 @@
  */
 
 /** Zend_Log_Formatter_Abstract */
-require_once 'Zend/Log/Formatter/Abstract.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Log/Formatter/Abstract.php';
 
 /**
  * @category   Zend

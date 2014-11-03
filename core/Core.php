@@ -25,6 +25,7 @@ error_reporting(E_ALL | E_STRICT);
 /**
  * Include Constants (if it hasn't already been included) to pull in BASE_PATH, etc
  */
+
 require_once dirname(__FILE__).'/Constants.php';
 
 /**
@@ -58,24 +59,27 @@ gc_enable();
 
 // Include the files needed the initial manifest building, as well as any files
 // that are needed for the boostrap process on every request.
-require_once 'cache/Cache.php';
-require_once 'core/Object.php';
-require_once 'core/ClassInfo.php';
-require_once 'view/TemplateGlobalProvider.php';
-require_once 'control/Director.php';
-require_once 'dev/Debug.php';
-require_once 'dev/DebugView.php';
-require_once 'dev/Backtrace.php';
-require_once 'dev/ZendLog.php';
-require_once 'dev/Log.php';
-require_once 'filesystem/FileFinder.php';
-require_once 'core/manifest/ClassLoader.php';
-require_once 'core/manifest/ClassManifest.php';
-require_once 'core/manifest/ManifestFileFinder.php';
-require_once 'core/manifest/TemplateLoader.php';
-require_once 'core/manifest/TemplateManifest.php';
-require_once 'core/manifest/TokenisedRegularExpression.php';
-require_once 'control/injector/Injector.php';
+
+$frameworkBase = BASE_PATH . DIRECTORY_SEPARATOR . FRAMEWORK_DIR . DIRECTORY_SEPARATOR;
+
+require_once $frameworkBase . 'cache/Cache.php';
+require_once $frameworkBase . 'core/Object.php';
+require_once $frameworkBase . 'core/ClassInfo.php';
+require_once $frameworkBase . 'view/TemplateGlobalProvider.php';
+require_once $frameworkBase . 'control/Director.php';
+require_once $frameworkBase . 'dev/Debug.php';
+require_once $frameworkBase . 'dev/DebugView.php';
+require_once $frameworkBase . 'dev/Backtrace.php';
+require_once $frameworkBase . 'dev/ZendLog.php';
+require_once $frameworkBase . 'dev/Log.php';
+require_once $frameworkBase . 'filesystem/FileFinder.php';
+require_once $frameworkBase . 'core/manifest/ClassLoader.php';
+require_once $frameworkBase . 'core/manifest/ClassManifest.php';
+require_once $frameworkBase . 'core/manifest/ManifestFileFinder.php';
+require_once $frameworkBase . 'core/manifest/TemplateLoader.php';
+require_once $frameworkBase . 'core/manifest/TemplateManifest.php';
+require_once $frameworkBase . 'core/manifest/TokenisedRegularExpression.php';
+require_once $frameworkBase . 'control/injector/Injector.php';
 
 // Initialise the dependency injector as soon as possible, as it is 
 // subsequently used by some of the following code

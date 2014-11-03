@@ -24,7 +24,7 @@
 /**
  * @see Zend_Cache_Core
  */
-require_once 'Zend/Cache/Core.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Cache/Core.php';
 
 
 /**

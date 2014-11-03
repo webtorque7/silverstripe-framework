@@ -1,5 +1,5 @@
 <?php
-require_once 'Zend/Log.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Log.php';
 
 /**
  * Extensions to Zend_Log to make it work nicer

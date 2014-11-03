@@ -21,7 +21,7 @@
  */
 
 /** Zend_Log_Writer_Abstract */
-require_once 'Zend/Log/Writer/Abstract.php';
+require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Log/Writer/Abstract.php';
 
 /**
  * @category   Zend
