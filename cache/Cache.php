@@ -215,8 +215,7 @@ class SS_Cache {
 		else $basicOptions['caching'] = false;
 
 		$frontendOptions = $frontendOptions ? array_merge($basicOptions, $frontendOptions) : $basicOptions;
-		
 		require_once THIRDPARTY_PATH . DIRECTORY_SEPARATOR . 'Zend/Cache.php';
-		return Zend_Cache::factory($frontend, $backend[0], $frontendOptions, $backend[1]);
+		return Zend_Cache::factory($frontend, $backend[0], $frontendOptions, $backend[1], false, !empty($backend[1]['customNaming']), !empty($backend[1]['autoload']));
 	}
 }
